@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.google.samples.apps.topeka.categories" >
+    <application>
+        <activity
+            android:name="com.google.samples.apps.topeka.categories.activity.CategorySelectionActivity"
+            android:theme="@style/Topeka.CategorySelectionActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="topeka.instantappsample.com"
+                    android:pathPrefix="/categories" />
+            </intent-filter>
+            <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="topeka.instantappsample.com"
+                    android:pathPrefix="/categories" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
